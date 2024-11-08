@@ -7,6 +7,68 @@
     <script src="javascript.js"></script>
 </head>
 <body>
+    <button id="rock">rock</button>
+    <button id="paper">paper</button>
+    <button id="scissors">scissors</button>
+
+    <div id="container"></div>
     
+
+<script>
+    let rock = document.querySelector("#rock");
+    let paper = document.querySelector("#paper");
+    let scissors = document.querySelector("#scissors");
+
+    let rounds = 0;
+
+    const humanChoiceDisplay = document.createElement("div");
+    humanChoiceDisplay.classList.add("humanChoiceDisplay");
+    const computerChoiceDisplay = document.createElement("div");
+    computerChoiceDisplay.classList.add("computerChoiceDisplay");
+
+    rock.addEventListener('click',(event) => {
+        playRound("rock", getComputerChoice(options));
+        rounds ++;
+        humanChoiceDisplay.textContent = ("Human chose rock!");
+
+    });
+
+    paper.addEventListener('click',(event) => {
+        playRound("paper", getComputerChoice(options));
+        rounds ++;
+        humanChoiceDisplay.textContent = ("Human chose paper!");
+    });
+
+    scissors.addEventListener('click',(event) => {
+        playRound("scissors", getComputerChoice(options));
+        rounds ++;
+        humanChoiceDisplay.textContent = ("Human chose scissors!");
+    });
+
+    const container = document.querySelector("#container");
+
+    const humanScoreDisplay = document.createElement("div");
+    humanScoreDisplay.classList.add("humanScoreDisplay");
+
+    const computerScoreDisplay = document.createElement("div");
+    computerScoreDisplay.classList.add("computerScoreDisplay");
+
+    const results = document.createElement("div");
+    results.classList.add("results");
+
+
+
+
+
+
+
+    //displayScore();
+    
+
+
+    
+</script>
 </body>
+
+
 </html>
